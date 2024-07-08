@@ -9,17 +9,15 @@ const config = {
 
   kit: {
     appDir: "app", // Required as the default is _app
-
     adapter: adapter({
       // default options are shown. On some platforms
       // these options are set automatically — see below
-      pages: "docs",
-      assets: "docs",
+      pages: "build",
+      assets: "build",
       fallback: undefined,
       precompress: false,
       strict: true,
     }),
-    paths: { base: "/nlus" },
   },
 };
 
