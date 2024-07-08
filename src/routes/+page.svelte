@@ -995,18 +995,18 @@
   @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
   :root {
-    --background-color: #eee0e0;
-    --search-background-color: #e7e7e7;
-    --search-border-color: #bd93bd;
-    --search-focused-color: #bd93bd;
+    --background-color: #ecf6fd;
+    --search-background-color: #ecf6fd;
+    --search-border-color: #a3d5ff;
+    --search-focused-color: #a3d5ff;
     --search-button-color: #f05365;
     --search-button-hover-color: #ca2b3e;
     --shadow-color: #0000001a;
     --item-text-color: #000000;
     --item-number-color: #000000;
-    --unit-text-color: #533a00;
-    --list-background-color: #f2edeb;
-    --list-border-color: #f05365;
+    --unit-text-color: #6f73d2;
+    --list-background-color: #f0f0fa;
+    --list-border-color: #7681b3;
     --spinner-color: #0000001a;
     --spinner-accent-color: #3437db;
     background-color: var(--background-color);
