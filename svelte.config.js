@@ -17,6 +17,7 @@ const config = {
       precompress: false,
       strict: true,
     }),
+    paths: { base: "https://github.com/486DX2-boomer/nlus/" },
   },
 };
 
