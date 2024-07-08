@@ -1,3 +1,18 @@
+<!-- --background-color: #eedacc;
+--search-background-color: #ffffff;
+--search-border-color: #ccc;
+--search-focused-color: #0f0fbb;
+--search-button-color: #bd0404;
+--search-button-hover-color: #bd0404;
+--shadow-color: #0000001a;
+--item-text-color: #0f0fbb;
+--item-number-color: #000000;
+--unit-text-color: #bd0404;
+--list-background-color: #ffffff;
+--list-border-color: #ccc;
+--spinner-color: #0000001a;
+--spinner-accent-color: #3437db; -->
+
 <script lang="ts">
   import { onMount } from "svelte";
 
@@ -7,6 +22,23 @@
     Article: number;
     Unit: string;
   }
+
+  // const theme = {
+  //   "--background-color": "#eedacc;",
+  //   "--search-background-color": "#ffffff;",
+  //   "--search-border-color": "#ccc;",
+  //   "--search-focused-color": "#0f0fbb;",
+  //   "--search-button-color": "#bd0404;",
+  //   "--search-button-hover-color": "#bd0404;",
+  //   "--shadow-color": "#0000001a;",
+  //   "--item-text-color": "#0f0fbb;",
+  //   "--item-number-color": "#000000;",
+  //   "--unit-text-color": "#bd0404;",
+  //   "--list-background-color": "#ffffff;",
+  //   "--list-border-color": "#ccc;",
+  //   "--spinner-color": "#0000001a;",
+  //   "--spinner-accent-color": "#3437db;",
+  // };
 
   let nlus: nluObject[] = [];
   let searchTerm = "";
@@ -69,7 +101,21 @@
   @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
   :root {
-    background-color: rgb(238, 218, 204);
+    --background-color: #eee0e0;
+    --search-background-color: #e7e7e7;
+    --search-border-color: #bd93bd;
+    --search-focused-color: #bd93bd;
+    --search-button-color: #f05365;
+    --search-button-hover-color: #ca2b3e;
+    --shadow-color: #0000001a;
+    --item-text-color: #000000;
+    --item-number-color: #000000;
+    --unit-text-color: #533a00;
+    --list-background-color: #f2edeb;
+    --list-border-color: #f05365;
+    --spinner-color: #0000001a;
+    --spinner-accent-color: #3437db;
+    background-color: var(--background-color);
   }
 
   .container {
@@ -79,19 +125,21 @@
   }
 
   .nlu-description {
-    color: rgb(15, 15, 187);
+    color: var(--item-text-color);
     font-family: "Noto Sans", monospace;
     font-size: 1.2rem;
     margin-right: 8px;
   }
 
   .nlu-article {
+    color: var(--item-number-color);
     font-family: "Gentium Book Plus", monospace;
     font-size: 1rem;
     margin-right: 8px;
   }
 
   .nlu-number {
+    color: var(--item-number-color);
     font-family: "Roboto Mono", sans-serif;
     font-size: 1.6rem;
     margin-left: 8px;
@@ -99,9 +147,9 @@
   }
 
   .nlu-unit {
+    color: var(--unit-text-color);
     font-size: 1rem;
     font-family: "Gentium Book Plus", serif;
-    color: rgb(189, 4, 4);
   }
 
   .searchBox {
@@ -109,10 +157,10 @@
     align-items: center;
     margin-bottom: 1rem;
     padding: 0.5rem;
-    background-color: white;
+    background-color: var(--search-background-color);
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px #0000001a;
   }
 
   .searchBox input {
@@ -126,14 +174,14 @@
 
   .searchBox input:focus {
     outline: none;
-    border-color: rgb(15, 15, 187);
+    border-color: var(--search-focused-color);
   }
 
   .searchBox button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
-    background-color: rgb(189, 4, 4);
+    background-color: var(--search-button-color);
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -141,7 +189,7 @@
   }
 
   .searchBox button:hover {
-    background-color: rgb(159, 0, 0);
+    background-color: var(--search-button-hover-color);
   }
 
   .nlu-list {
@@ -157,10 +205,10 @@
     margin: 0 auto;
     max-width: 70%;
     margin-bottom: 0.5rem;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: var(--list-background-color);
+    border: 1px solid var(--list-border-color);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--shadow-color);
   }
 
   .nlu-item:last-child {
@@ -168,8 +216,8 @@
   }
 
   .spinner {
-    border: 5px solid rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #3437db;
+    border: 5px solid var(--spinner-color);
+    border-top: 5px solid var(--spinner-accent-color);
     border-radius: 50%;
     width: 50px;
     height: 50px;
