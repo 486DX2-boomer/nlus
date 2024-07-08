@@ -17,6 +17,7 @@ const config = {
       precompress: false,
       strict: true,
     }),
+    paths: { base: "/nlus" },
   },
 };
 
