@@ -1048,13 +1048,41 @@
 
   .searchBox {
     display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
     padding: 0.5rem;
     background-color: var(--search-background-color);
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 4px #0000001a;
+    margin-bottom: 1rem;
+    /* position: fixed;
+    top: 90%;
+    width: 80%; */
+  }
+
+  @media screen and (width < 800px) {
+    .nlu-description {
+      font-size: 1rem;
+      margin-right: 3rem;
+      min-width: 2rem;
+      max-width: 4rem;
+    }
+
+    .nlu-number {
+      font-size: 1.5rem;
+      margin-right: 8px;
+    }
+
+    .searchBox {
+      display: flex;
+      padding: 0.5rem;
+      background-color: var(--search-background-color);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px #0000001a;
+      position: fixed;
+      top: 90%;
+      width: 80%;
+    }
   }
 
   .searchBox input {
@@ -1063,7 +1091,6 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 0.5rem;
   }
 
   .searchBox input:focus {
@@ -1073,6 +1100,7 @@
 
   .searchBox button {
     padding: 0.5rem 1rem;
+    margin-left: 0.2rem;
     font-size: 1rem;
     border: none;
     background-color: var(--search-button-color);
@@ -1090,14 +1118,16 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex-column;
   }
 
   .nlu-list-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0.5rem;
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 80%;
     margin-bottom: 0.5rem;
     background-color: var(--list-background-color);
     border: 1px solid var(--list-border-color);
