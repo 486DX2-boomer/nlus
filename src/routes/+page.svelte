@@ -988,6 +988,9 @@
     <div class="spinner"></div>
   {/if}
 </div>
+<footer>
+  <!-- This is just a spacer -->
+</footer>
 
 <!-- // ----------------------------------------------------------------------->
 
@@ -1074,14 +1077,16 @@
 
     .searchBox {
       display: flex;
-      padding: 0.5rem;
       background-color: var(--search-background-color);
       border: 1px solid #ccc;
       border-radius: 8px;
       box-shadow: 0 2px 4px #0000001a;
       position: fixed;
       top: 90%;
-      width: 80%;
+      min-width: 90%;
+      max-width: 90%;
+      padding: 0;
+      margin: 0;
     }
   }
 
@@ -1148,6 +1153,10 @@
     animation: spin 1s linear infinite;
     margin: auto;
     margin-top: 50px;
+  }
+
+  footer {
+    min-height: 4rem;
   }
 
   @keyframes spin {
